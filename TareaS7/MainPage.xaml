@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaS7.MainPage"
+             xmlns:local ="clr-namespace:TareaS7.ViewModels">
+
+    <ContentPage.BindingContext>
+        <local:ViewModelMainPage></local:ViewModelMainPage>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        
+        <Label Text="Usuario"></Label>
+        <Entry Text="{Binding Usuario}" Keyboard="Email"></Entry>
+
+        <Label Text="Contraseña"></Label>
+        <Entry Text="{Binding Pass}" Keyboard="Text" ></Entry>
+
+        <Button Command="{Binding inicioSesion}" Text="Entrar" CornerRadius="20" ></Button>
+        <Button Text="Registrar" CornerRadius="20"></Button>
+
+        <Label Text="{Binding Resultado}"></Label>
+        <Label />
+    </StackLayout>
+</ContentPage>

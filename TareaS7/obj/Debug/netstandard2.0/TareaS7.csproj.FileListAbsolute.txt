@@ -1,0 +1,17 @@
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\bin\Debug\netstandard2.0\TareaS7.deps.json
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\bin\Debug\netstandard2.0\TareaS7.dll
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\bin\Debug\netstandard2.0\TareaS7.pdb
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.csproj.AssemblyReference.cache
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\Views\ViewInicio.xaml.g.cs
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.AssemblyInfoInputs.cache
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.AssemblyInfo.cs
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.csproj.CoreCompileInputs.cache
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.dll
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\refint\TareaS7.dll
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\TareaS7.pdb
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\ref\TareaS7.dll
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7\obj\Debug\netstandard2.0\Views\ViewRegistro.xaml.g.cs
