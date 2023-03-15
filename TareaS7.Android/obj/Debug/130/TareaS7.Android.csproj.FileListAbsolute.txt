@@ -643,3 +643,4 @@ C:\Users\navil\Documents\GitHub\TareaS7\TareaS7.Android\obj\Debug\130\stamp\_Con
 C:\Users\navil\Documents\GitHub\TareaS7\TareaS7.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\navil\Documents\GitHub\TareaS7\TareaS7.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\navil\Documents\GitHub\TareaS7\TareaS7.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\navil\Documents\GitHub\TareaS7\TareaS7.Android\obj\Debug\130\android\assets\Newtonsoft.Json.dll

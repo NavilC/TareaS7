@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "d21iPlhiicTX3/I6AF49HpxW6KjsTlUyO6CmSNfAFKp0dFcuaaiGhGHojBrTq60jdLnu9ry0v+Bac9r3m1f4SQ==",
+  "dgSpecHash": "PJmhY8/Q4Yy3G4ZP/+z/4gchH+idYc0eXG7NKlhtgnCqdkAxfJaspdlsO0T0qFNwDSqPPsvzss1GlAIXhU7Daw==",
   "success": true,
   "projectFilePath": "C:\\Users\\navil\\Documents\\GitHub\\TareaS7\\TareaS7.Android\\TareaS7.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\navil\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+    "C:\\Users\\navil\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\navil\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\navil\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\navil\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

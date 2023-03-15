@@ -5,7 +5,7 @@
              xmlns:local ="clr-namespace:TareaS7.ViewModels">
 
     <ContentPage.BindingContext>
-        <local:ViewModelMainPage></local:ViewModelMainPage>
+        <local:ViewModelRegistro></local:ViewModelRegistro>
     </ContentPage.BindingContext>
     
     
@@ -19,12 +19,12 @@
             <Entry Text="{Binding Nombre}" Keyboard="Text"></Entry>
             
             <Label Text="email"></Label>
-            <Entry Text="{Binding Usuario}" Keyboard="Email"></Entry>
+            <Entry Text="{Binding Email}" Keyboard="Email"></Entry>
 
             <Label Text="Contraseña"></Label>
             <Entry Text="{Binding Pass}" Keyboard="Text" ></Entry>
             
-            <Button Command="{Binding  }" Text="Registrar" CornerRadius="20"></Button>
+            <Button Command="{Binding registroUsuario}" Text="Registrar" CornerRadius="20"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

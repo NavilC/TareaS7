@@ -11,9 +11,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
 
             <CollectionView Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" 
                         SelectedItem="{Binding PersonaSeleccionada}"
@@ -22,9 +20,9 @@
                         SelectionChangedCommand="{Binding actualizarFormulario}"                     
                         >
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
 
-                        <Grid Padding="10">
+
+                    <!--<Grid Padding="10">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"></RowDefinition>
@@ -40,12 +38,37 @@
                             <Label Text="{Binding id_detalle_pedido}"  Grid.Row="0" Grid.Column="0" />
                             <Label Text="{Binding id_pan}" Grid.Row="0" Grid.Column="1"/>
 
+                        </Grid>-->
+
+                    <DataTemplate>
+
+                        <Grid Padding="10" >
+                            <Grid.RowDefinitions  >
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="60" ></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding imagen}" Grid.Row="1" Grid.Column="0"   />
+                            <Label Grid.Row="0" Grid.Column="0"
+                       Text="{Binding id_pan}"
+                       FontAttributes="Bold" FontSize="10" />
+                            <Label Grid.Row="2" Grid.Column="0"
+                       Text="{Binding tipo_pan}"
+                       FontAttributes="Italic"
+                       FontSize="10"
+                       VerticalOptions="End" />
+
+                            <Button Grid.Row="3" Text="Ingresar pedido" FontAttributes="Italic"
+                                    FontSize="10"/>
                         </Grid>
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
 
         </StackLayout>
     </ContentPage.Content>

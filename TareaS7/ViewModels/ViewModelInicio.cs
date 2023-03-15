@@ -50,7 +50,7 @@ namespace TareaS7.ViewModels
             }
 
 
-            string url = "https://desfrlopez.me/acaceres/api/tbl_detalle_pedido/";
+            string url = "https://desfrlopez.me/acaceres/api/tbl_panes/";
 
             ObservableCollection<persona> listPersonas = new ObservableCollection<persona>();
 

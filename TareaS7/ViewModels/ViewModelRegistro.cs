@@ -1,22 +1,47 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 using TareaS7.Models;
+using TareaS7.Views;
 using Xamarin.Forms;
 
 namespace TareaS7.ViewModels
 {
-    internal class ViewModelRegistro : INotifyPropertyChanged
+    public class ViewModelRegistro : INotifyPropertyChanged
     {
         public ViewModelRegistro() {
 
             registroUsuario = new Command(async () =>
             {
-                HttpClient client = new HttpClient();
+                using (var httpClient = new HttpClient())
+                {
+                    registro body1 = new registro()
+                    {
+                        nombre_cliente = this.nombre,
+                        email = this.email,
+                        pass = this.pass,
+                        active = 1,
+                        id_rol = 1
+                    };
+                    var myContent = JsonConvert.SerializeObject(body1);
+                    var stringContent = new StringContent(myContent, UnicodeEncoding.UTF8, "application/json");
 
-                var envio = await client.GetAsync(url + "/" + this.nombre + "/" +this.usuario + "/" + this.pass +"/" +"1" + "/" + "1");
+                    var respuesta = await httpClient.PostAsync(url, stringContent);
+
+                    if (respuesta.IsSuccessStatusCode)
+                    {
+                       // getPersonas();
+                        await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+                    }
+                }
             });
         }
         INavigation navigation;
@@ -35,14 +60,14 @@ namespace TareaS7.ViewModels
             }
         }
 
-        string usuario;
-        public string Usuario 
+        string email;
+        public string Email 
         {
-            get => usuario;
+            get => email;
             set
             {
-                usuario = value;
-                var args = new PropertyChangedEventArgs(nameof(usuario));
+                email = value;
+                var args = new PropertyChangedEventArgs(nameof(email));
                 PropertyChanged?.Invoke(this, args);
             }
         }
@@ -59,6 +84,67 @@ namespace TareaS7.ViewModels
             }
         }
         
+        registro personaSeleccionada = new registro();
+
+        public registro PersonaSeleccionada
+        {
+            get => personaSeleccionada;
+            set
+            {
+                personaSeleccionada = value;
+                var args = new PropertyChangedEventArgs(nameof(PersonaSeleccionada));
+                PropertyChanged?.Invoke(this, args);
+
+            }
+        }
+
+        private async void getPersonas()
+        {
+
+            ListPersonas = new ObservableCollection<registro>();
+
+            HttpClient httpClient = new HttpClient();
+
+            var respuesta = await httpClient.GetAsync(url);
+
+            if (respuesta.IsSuccessStatusCode)
+            {
+
+                var contenido = await respuesta.Content.ReadAsStringAsync();
+                JsonSerializerOptions opciones = new JsonSerializerOptions()
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                var listado = System.Text.Json.JsonSerializer.Deserialize<List<registro>>(contenido, opciones);
+
+
+                foreach (var item in listado)
+                {
+
+                    ListPersonas.Add(item);
+
+
+                }
+
+            }
+        }
+
+        ObservableCollection<registro> listPersonas = new ObservableCollection<registro>();
+
+        public ObservableCollection<registro> ListPersonas
+        {
+            get => listPersonas;
+            set
+            {
+
+                listPersonas = value;
+                var args = new PropertyChangedEventArgs(nameof(ListPersonas));
+                PropertyChanged?.Invoke(this, args);
+
+            }
+
+
+        }
 
         public Command registroUsuario { get; }
         public event PropertyChangedEventHandler PropertyChanged;

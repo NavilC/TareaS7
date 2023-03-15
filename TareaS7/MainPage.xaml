@@ -9,9 +9,7 @@
     </ContentPage.BindingContext>
     
     <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <Label Text="Bienvenido a la panaderia don camaron" />
         
         <Label Text="Usuario"></Label>
         <Entry Text="{Binding Usuario}" Keyboard="Email"></Entry>
@@ -20,7 +18,7 @@
         <Entry Text="{Binding Pass}" Keyboard="Text" ></Entry>
 
         <Button Command="{Binding inicioSesion}" Text="Entrar" CornerRadius="20" ></Button>
-        <Button Text="Registrar" CornerRadius="20"></Button>
+        <Button Command="{Binding Registro}" Text="Registrar" CornerRadius="20"></Button>
 
         <Label Text="{Binding Resultado}"></Label>
         <Label />

@@ -47,10 +47,16 @@ namespace TareaS7.ViewModels
                     {
 
                         Resultado = "Inicio de Sesión Erroneo";
+                        
                     }
 
                 }
 
+            });
+
+            Registro = new Command(async () =>
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new ViewRegistro());
             });
 
 
@@ -99,6 +105,7 @@ namespace TareaS7.ViewModels
             }
         }
 
+        public Command Registro { get; }
         public Command inicioSesion { get; }
         public event PropertyChangedEventHandler PropertyChanged;
     }
